@@ -7,6 +7,13 @@ import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
 public class test {
+
+    public  static  void dropdown(WebDriver driver){
+        Select dropdown=new Select(driver.findElement(By.xpath("//select[@class = 'product_sort_container']")));
+        dropdown.selectByVisibleText("Price (high to low)");
+
+        driver.findElement(By.xpath("//button[@id='add-to-cart-sauce-labs-fleece-jacket']")).click();
+    }
     public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver","C:\\Users\\shredeshpande\\Downloads\\chromedriver.exe");
         WebDriver driver= new ChromeDriver();
@@ -20,10 +27,8 @@ public class test {
         driver.findElement(By.xpath("//input[@id='login-button']")).click();
 
 
-        Select dropdown=new Select(driver.findElement(By.xpath("//select[@class = 'product_sort_container']")));
-        dropdown.selectByVisibleText("Price (high to low)");
 
-        driver.findElement(By.xpath("//button[@id='add-to-cart-sauce-labs-fleece-jacket']")).click();
+
 
 
 
