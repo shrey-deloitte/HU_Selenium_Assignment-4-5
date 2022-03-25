@@ -36,12 +36,14 @@ public class Resources {
     public  static  void dropdown(){
         Select dropdown=new Select(driver.findElement(By.xpath("//select[@class = 'product_sort_container']")));
         dropdown.selectByVisibleText("Price (high to low)");
+    }
 
+    public  static void addtoCart(){
         driver.findElement(By.xpath("//button[@id='add-to-cart-sauce-labs-fleece-jacket']")).click();
+
     }
 
     public static void login() throws IOException, InterruptedException {
-        // driver=new ChromeDriver();
         String filePath = "C:\\Users\\shredeshpande\\Documents\\Ass4UserIDPass.xlsx";
         File file = new File(filePath);
 
@@ -66,30 +68,19 @@ public class Resources {
                     case 1-> userObj.setPassword(data);
                 }
 
-
-
                 System.out.println(data);
 
             }
             list.add(userObj);
         }
 
-        XSSFRow row = null;
-        XSSFCell cell = null;
 
 
-
-        System.out.println("********************************** Reading Data **********************************");
         driver.findElement(By.xpath("//input[@id='user-name']")).sendKeys(list.get(0).userName);
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys(list.get(0).password);
 
         sleep(1000);
         driver.findElement(By.xpath("//input[@id='login-button']")).click();
-        String result = null;
-
-        //  String actualurl = driver.getCurrentUrl();
-        sleep(3000);
-        System.out.println(email + " " + password);
 
     }
 
@@ -102,6 +93,8 @@ public class Resources {
         launch();
         login();
         dropdown();
+        addtoCart();
+
     }
 }
 
