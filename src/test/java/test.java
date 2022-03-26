@@ -2,11 +2,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
 public class test {
+
 
     public  static  void dropdown(WebDriver driver){
         Select dropdown=new Select(driver.findElement(By.xpath("//select[@class = 'product_sort_container']")));
@@ -25,6 +27,7 @@ public class test {
         driver.findElement(By.xpath("//input[@id='user-name']")).sendKeys("standard_user");
         driver.findElement(By.xpath("//input[@id='password']")).sendKeys("secret_sauce");
         driver.findElement(By.xpath("//input[@id='login-button']")).click();
+
 
 
 
