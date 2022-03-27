@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -30,6 +31,10 @@ public class Methods {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
         driver.get("https://www.saucedemo.com/");
+    }
+    @AfterTest
+    public static void exit(){
+        driver.quit();
     }
 
     @Test(priority = 1)
@@ -139,6 +144,27 @@ public class Methods {
         driver.findElement(By.xpath("//input[@id='postal-code']")).sendKeys("510008");
         driver.findElement(By.xpath("//input[@id='continue']")).click();
     }
+    @Test(priority = 10)
+    public static void finish() throws InterruptedException {
+        driver.findElement(By.xpath("//button[@id='finish']")).click();
+        sleep(2000);
+    }
+
+    @Test(priority = 11)
+    public static void msgCheck(){
+        String msg=driver.findElement(By.xpath("//h2[@class='complete-header']")).getText();
+        String mainMsg="THANK YOU FOR YOUR ORDER";
+        if (msg.equals(mainMsg)){
+            System.out.println("Success");
+        }
+        else {
+            System.out.println("error");
+        }
+
+
+    }
+
+
 
 
 
