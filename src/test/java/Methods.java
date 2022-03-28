@@ -7,6 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -14,6 +15,7 @@ import org.testng.annotations.Test;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -29,7 +31,7 @@ public class Methods {
         System.setProperty("webdriver.chrome.driver","C:\\Users\\shredeshpande\\Downloads\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
         driver.get("https://www.saucedemo.com/");
     }
     @AfterTest
@@ -41,12 +43,13 @@ public class Methods {
     public  static  void dropdown(){
         Select dropdown=new Select(driver.findElement(By.xpath("//select[@class = 'product_sort_container']")));
         dropdown.selectByVisibleText("Price (high to low)");
+        Reporter.log("This is log");
     }
 
     @Test(priority = 2)
     public  static void addtoCart(){
         driver.findElement(By.xpath("//button[@id='add-to-cart-sauce-labs-fleece-jacket']")).click();
-
+        log.info("add to cart");
     }
 
     @Test(priority = 3)
@@ -54,6 +57,7 @@ public class Methods {
         driver.findElement(By.xpath("//button[@class='btn btn_primary btn_small btn_inventory']/descendant-or-self::button")).click();
         sleep(2000);
         driver.findElement(By.xpath("//button[@id='remove-sauce-labs-backpack']")).click();
+        log.error("choose highest");
     }
 
     @Test(priority = 0)
@@ -165,37 +169,6 @@ public class Methods {
     }
 
 
-
-
-
-
-
-
-
-
-    public static void mainLaunch(String[] args) throws IOException, InterruptedException ,Exception{
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\shredeshpande\\Downloads\\chromedriver.exe");
-        driver = new ChromeDriver();
-
-
-        launch();
-        login();
-        dropdown();
-        addtoCart();
-        Choosehighest();
-        cart();
-        continueShopping();
-        dropdownLowest();
-        driver.findElement(By.xpath("//button[@id='add-to-cart-sauce-labs-onesie']")).click();
-        int badge=Integer.parseInt(badge());
-        if(badge==badge+1){
-            driver.navigate().refresh();
-        }
-        cart();
-        checkout();
-
-
-    }
 }
 
 

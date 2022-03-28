@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[This is log]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2022-03-28T10:25:08 IST" name="Suite1" finished-at="2022-03-28T10:25:29 IST" duration-ms="21237">
+    <groups>
+    </groups>
+    <test started-at="2022-03-28T10:25:08 IST" name="launch" finished-at="2022-03-28T10:25:29 IST" duration-ms="21237">
+      <class name="Methods">
+        <test-method is-config="true" signature="launch()[pri:0, instance:Methods@163e4e87]" started-at="2022-03-28T10:25:08 IST" name="launch" finished-at="2022-03-28T10:25:11 IST" duration-ms="3542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launch -->
+        <test-method signature="login()[pri:0, instance:Methods@163e4e87]" started-at="2022-03-28T10:25:11 IST" name="login" finished-at="2022-03-28T10:25:15 IST" duration-ms="4260" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="dropdown()[pri:1, instance:Methods@163e4e87]" started-at="2022-03-28T10:25:15 IST" name="dropdown" finished-at="2022-03-28T10:25:16 IST" duration-ms="154" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[This is log]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- dropdown -->
+        <test-method signature="addtoCart()[pri:2, instance:Methods@163e4e87]" started-at="2022-03-28T10:25:16 IST" name="addtoCart" finished-at="2022-03-28T10:25:16 IST" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addtoCart -->
+        <test-method signature="Choosehighest()[pri:3, instance:Methods@163e4e87]" started-at="2022-03-28T10:25:16 IST" name="Choosehighest" finished-at="2022-03-28T10:25:18 IST" duration-ms="2174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Choosehighest -->
+        <test-method signature="cart()[pri:4, instance:Methods@163e4e87]" started-at="2022-03-28T10:25:18 IST" name="cart" finished-at="2022-03-28T10:25:20 IST" duration-ms="2127" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cart -->
+        <test-method signature="continueShopping()[pri:5, instance:Methods@163e4e87]" started-at="2022-03-28T10:25:20 IST" name="continueShopping" finished-at="2022-03-28T10:25:22 IST" duration-ms="2158" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- continueShopping -->
+        <test-method signature="dropdownLowest()[pri:6, instance:Methods@163e4e87]" started-at="2022-03-28T10:25:22 IST" name="dropdownLowest" finished-at="2022-03-28T10:25:23 IST" duration-ms="1183" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dropdownLowest -->
+        <test-method signature="cart1()[pri:8, instance:Methods@163e4e87]" started-at="2022-03-28T10:25:23 IST" name="cart1" finished-at="2022-03-28T10:25:25 IST" duration-ms="2129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cart1 -->
+        <test-method signature="checkout()[pri:9, instance:Methods@163e4e87]" started-at="2022-03-28T10:25:25 IST" name="checkout" finished-at="2022-03-28T10:25:26 IST" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkout -->
+        <test-method signature="checkoutInfo()[pri:9, instance:Methods@163e4e87]" started-at="2022-03-28T10:25:26 IST" name="checkoutInfo" finished-at="2022-03-28T10:25:26 IST" duration-ms="627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkoutInfo -->
+        <test-method signature="finish()[pri:10, instance:Methods@163e4e87]" started-at="2022-03-28T10:25:26 IST" name="finish" finished-at="2022-03-28T10:25:28 IST" duration-ms="2138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- finish -->
+        <test-method signature="msgCheck()[pri:11, instance:Methods@163e4e87]" started-at="2022-03-28T10:25:28 IST" name="msgCheck" finished-at="2022-03-28T10:25:28 IST" duration-ms="64" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- msgCheck -->
+        <test-method is-config="true" signature="exit()[pri:0, instance:Methods@163e4e87]" started-at="2022-03-28T10:25:28 IST" name="exit" finished-at="2022-03-28T10:25:29 IST" duration-ms="381" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- exit -->
+      </class> <!-- Methods -->
+    </test> <!-- launch -->
+  </suite> <!-- Suite1 -->
+</testng-results>
